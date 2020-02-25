@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.DetailActivity">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.firstbitpandachallenge.viewmodel.DetailActivityViewModel" />
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/detail_logo_size"
+            android:layout_height="@dimen/detail_logo_size"
+            android:layout_marginTop="@dimen/detail_logo_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_wallet" />
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_balance_margin_top"
+            android:text="@{viewmodel.balanceData}"
+            android:textSize="@dimen/detail_balance_text_size"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_price_margin_top"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@{viewmodel.priceData}"
+            android:visibility="@{viewmodel.priceDataVisibility}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balance" />
+
+        <Button
+            android:id="@+id/buy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_buy_button_margin_top"
+            android:background="@color/buttonColor"
+            android:text="@string/detail_screen_buy_button_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price"
+            android:onClick="@{() -> viewmodel.onBuyButtonClicked()}" />
+
+        <Button
+            android:id="@+id/sell_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_sell_button_margin_top"
+            android:background="@color/buttonColor"
+            android:text="@string/detail_screen_sell_button_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/price"
+            android:onClick="@{() -> viewmodel.onSellButtonClicked()}" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <View
+                android:id="@+id/transaction_list_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/transaction_list_divider_height"
+                android:layout_marginTop="@dimen/transaction_list_divider_margin_top"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buy_button" />
+
+            <TextView
+                android:id="@+id/transaction_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_screen_empty_transaction_list_label"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transaction_list_divider" />
+
+            <ImageView
+                android:id="@+id/empty_list_icon"
+                android:layout_width="@dimen/empty_list_icon_size"
+                android:layout_height="@dimen/empty_list_icon_size"
+                android:layout_marginBottom="@dimen/empty_list_icon_margin_bottom"
+                app:layout_constraintBottom_toTopOf="@+id/transaction_list"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_empty_list" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

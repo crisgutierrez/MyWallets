@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="@dimen/asset_wallet_item_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/asset_wallet_icon"
+        android:layout_width="@dimen/asset_wallet_item_icon_size"
+        android:layout_height="@dimen/asset_wallet_item_icon_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/wallet_item_icon_content_description" />
+
+    <TextView
+        android:id="@+id/asset_wallet_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/asset_wallet_title_margin_start"
+        android:textSize="@dimen/asset_wallet_item_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/asset_wallet_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/wallet_item_name_sample" />
+
+    <TextView
+        android:id="@+id/asset_wallet_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/asset_wallet_amount_margin_end"
+        android:textSize="@dimen/asset_wallet_item_text_size"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/wallet_item_balance_sample" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

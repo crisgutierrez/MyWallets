@@ -1,0 +1,23 @@
+<resources>
+
+    <!--    Transaction Item    -->
+    <dimen name="asset_wallet_item_padding">8dp</dimen>
+    <dimen name="asset_wallet_item_icon_size">52dp</dimen>
+    <dimen name="asset_wallet_item_text_size">16sp</dimen>
+    <dimen name="asset_wallet_title_margin_start">16dp</dimen>
+    <dimen name="asset_wallet_amount_margin_end">32dp</dimen>
+
+    <!--    Detail Activity     -->
+    <dimen name="detail_logo_size">70dp</dimen>
+    <dimen name="detail_logo_margin_top">32dp</dimen>
+    <dimen name="detail_balance_margin_top">16dp</dimen>
+    <dimen name="detail_balance_text_size">32sp</dimen>
+    <dimen name="detail_price_margin_top">8dp</dimen>
+    <dimen name="detail_buy_button_margin_top">16dp</dimen>
+    <dimen name="detail_sell_button_margin_top">16dp</dimen>
+    <dimen name="transaction_list_divider_margin_top">32dp</dimen>
+    <dimen name="transaction_list_divider_height">1dp</dimen>
+    <dimen name="empty_list_icon_size">100dp</dimen>
+    <dimen name="empty_list_icon_margin_bottom">32dp</dimen>
+
+</resources>

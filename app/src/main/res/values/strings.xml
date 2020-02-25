@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FirstBitpandaChallenge</string>
+    <string name="title_activity_main">Wallets</string>
+    <string name="action_filter">Filter</string>
+
+    <!--    Main Screen     -->
+    <string name="main_screen_filter_dialog_title">Set the type</string>
+    <string name="main_screen_filter_dialog_button">Cancel</string>
+    <string name="main_screen_filter_dialog_all">ALL</string>
+    <string name="main_screen_filter_dialog_fiat">FIAT</string>
+    <string name="main_screen_filter_dialog_cryptocoin">CRYPTOCOIN</string>
+    <string name="main_screen_filter_dialog_metal">METAL</string>
+
+    <!--    Detail Activity     -->
+    <string name="detail_screen_balance">%s %s</string>
+    <string name="detail_screen_price">Price: %s EUR</string>
+    <string name="detail_screen_buy_button_label">Buy</string>
+    <string name="detail_screen_sell_button_label">Sell</string>
+    <string name="detail_screen_empty_transaction_list_label">Transactions will appear here</string>
+    <string name="detail_screen_feature_no_implemented">Sorry, this feature is not implemented yet.</string>
+
+    <!--    Wallet Item     -->
+    <string name="wallet_item_icon_content_description">Wallet Icon.</string>
+    <string name="wallet_item_name_sample">Food</string>
+    <string name="wallet_item_balance_sample">-150</string>
+
+</resources>
